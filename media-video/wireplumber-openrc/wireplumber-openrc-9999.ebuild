@@ -18,7 +18,7 @@ fi
 LICENSE="Unlicense"
 SLOT="0"
 
-RDEPEND="media-video/pipewire"
+RDEPEND="media-video/wireplumber media-video/pipewire-openrc"
 
 src_compile() {
 	:
