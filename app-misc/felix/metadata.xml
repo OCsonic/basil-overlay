@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>ocsps2@protonmail.com</email>
+		<name>Basil</name>
+	</maintainer>
+	<use>
+		<flag name="custom-rustflags">Build with user-specified RUSTFLAGS (unsupported)</flag>
+	</use>
+</pkgmetadata>
