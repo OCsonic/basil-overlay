@@ -1,5 +1,5 @@
-## Basil's Overlay
+# Basil's Overlay
 WIP
 
-# Contributing
+## Contributing
 check [TODO.md](./TODO.md) to see where you can help out!
