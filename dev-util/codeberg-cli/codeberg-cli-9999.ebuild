@@ -1,0 +1,249 @@
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+CRATES="
+	addr2line@0.21.0
+	adler@1.0.2
+	aho-corasick@1.1.0
+	android-tzdata@0.1.1
+	android_system_properties@0.1.5
+	anstream@0.5.0
+	anstyle@1.0.3
+	anstyle-parse@0.2.1
+	anstyle-query@1.0.0
+	anstyle-wincon@2.1.0
+	anyhow@1.0.75
+	autocfg@1.1.0
+	backtrace@0.3.69
+	base64@0.21.4
+	bitflags@1.3.2
+	bitflags@2.4.0
+	bumpalo@3.14.0
+	bytes@1.5.0
+	cc@1.0.83
+	cesu8@1.1.0
+	cfg-if@1.0.0
+	chrono@0.4.31
+	clap@4.4.4
+	clap_builder@4.4.4
+	clap_complete@4.4.1
+	clap_derive@4.4.2
+	clap_lex@0.5.1
+	colorchoice@1.0.0
+	combine@4.6.6
+	console@0.15.7
+	core-foundation@0.9.3
+	core-foundation-sys@0.8.4
+	crossterm@0.25.0
+	crossterm_winapi@0.9.1
+	derive-new@0.5.9
+	dirs@4.0.0
+	dirs-sys@0.3.7
+	dyn-clone@1.0.14
+	encode_unicode@0.3.6
+	encoding_rs@0.8.33
+	errno@0.3.3
+	errno-dragonfly@0.1.2
+	fastrand@2.0.0
+	fnv@1.0.7
+	foreign-types@0.3.2
+	foreign-types-shared@0.1.1
+	form_urlencoded@1.2.0
+	futures-channel@0.3.28
+	futures-core@0.3.28
+	futures-sink@0.3.28
+	futures-task@0.3.28
+	futures-util@0.3.28
+	getrandom@0.2.10
+	gimli@0.28.0
+	h2@0.3.21
+	hashbrown@0.12.3
+	heck@0.4.1
+	hermit-abi@0.3.3
+	home@0.5.5
+	http@0.2.9
+	http-body@0.4.5
+	httparse@1.8.0
+	httpdate@1.0.3
+	hyper@0.14.27
+	hyper-tls@0.5.0
+	iana-time-zone@0.1.57
+	iana-time-zone-haiku@0.1.2
+	idna@0.4.0
+	indexmap@1.9.3
+	indicatif@0.17.6
+	inquire@0.6.2
+	instant@0.1.12
+	ipnet@2.8.0
+	itoa@1.0.9
+	jni@0.21.1
+	jni-sys@0.3.0
+	js-sys@0.3.64
+	lazy_static@1.4.0
+	libc@0.2.148
+	linux-raw-sys@0.4.7
+	lock_api@0.4.10
+	log@0.4.20
+	malloc_buf@0.0.6
+	memchr@2.6.3
+	mime@0.3.17
+	miniz_oxide@0.7.1
+	mio@0.8.8
+	native-tls@0.2.11
+	ndk-context@0.1.1
+	newline-converter@0.2.2
+	nu-ansi-term@0.46.0
+	num-traits@0.2.16
+	num_cpus@1.16.0
+	number_prefix@0.4.0
+	objc@0.2.7
+	object@0.32.1
+	once_cell@1.18.0
+	openssl@0.10.57
+	openssl-macros@0.1.1
+	openssl-probe@0.1.5
+	openssl-sys@0.9.93
+	overload@0.1.1
+	parking_lot@0.12.1
+	parking_lot_core@0.9.8
+	percent-encoding@2.3.0
+	pin-project-lite@0.2.13
+	pin-utils@0.1.0
+	pkg-config@0.3.27
+	portable-atomic@1.4.3
+	proc-macro2@1.0.67
+	quote@1.0.33
+	raw-window-handle@0.5.2
+	redox_syscall@0.2.16
+	redox_syscall@0.3.5
+	redox_users@0.4.3
+	regex@1.9.5
+	regex-automata@0.3.8
+	regex-syntax@0.7.5
+	reqwest@0.11.20
+	rustc-demangle@0.1.23
+	rustix@0.38.13
+	rustversion@1.0.14
+	ryu@1.0.15
+	same-file@1.0.6
+	schannel@0.1.22
+	scopeguard@1.2.0
+	security-framework@2.9.2
+	security-framework-sys@2.9.1
+	serde@1.0.188
+	serde_derive@1.0.188
+	serde_json@1.0.107
+	serde_urlencoded@0.7.1
+	sharded-slab@0.1.4
+	signal-hook@0.3.17
+	signal-hook-mio@0.2.3
+	signal-hook-registry@1.4.1
+	slab@0.4.9
+	smallvec@1.11.0
+	smawk@0.3.2
+	socket2@0.4.9
+	socket2@0.5.4
+	strsim@0.10.0
+	strum@0.24.1
+	strum_macros@0.24.3
+	syn@1.0.109
+	syn@2.0.37
+	tempfile@3.8.0
+	term-table@1.3.2
+	textwrap@0.16.0
+	thiserror@1.0.48
+	thiserror-impl@1.0.48
+	thread_local@1.1.7
+	tinyvec@1.6.0
+	tinyvec_macros@0.1.1
+	tokio@1.32.0
+	tokio-macros@2.1.0
+	tokio-native-tls@0.3.1
+	tokio-util@0.7.8
+	tower-service@0.3.2
+	tracing@0.1.37
+	tracing-attributes@0.1.26
+	tracing-core@0.1.31
+	tracing-log@0.1.3
+	tracing-subscriber@0.3.17
+	try-lock@0.2.4
+	unicode-bidi@0.3.13
+	unicode-ident@1.0.12
+	unicode-linebreak@0.1.5
+	unicode-normalization@0.1.22
+	unicode-segmentation@1.10.1
+	unicode-width@0.1.11
+	url@2.4.1
+	utf8parse@0.2.1
+	valuable@0.1.0
+	vcpkg@0.2.15
+	walkdir@2.4.0
+	want@0.3.1
+	wasi@0.11.0+wasi-snapshot-preview1
+	wasm-bindgen@0.2.87
+	wasm-bindgen-backend@0.2.87
+	wasm-bindgen-futures@0.4.37
+	wasm-bindgen-macro@0.2.87
+	wasm-bindgen-macro-support@0.2.87
+	wasm-bindgen-shared@0.2.87
+	web-sys@0.3.64
+	webbrowser@0.8.11
+	winapi@0.3.9
+	winapi-i686-pc-windows-gnu@0.4.0
+	winapi-util@0.1.5
+	winapi-x86_64-pc-windows-gnu@0.4.0
+	windows@0.48.0
+	windows-sys@0.45.0
+	windows-sys@0.48.0
+	windows-targets@0.42.2
+	windows-targets@0.48.5
+	windows_aarch64_gnullvm@0.42.2
+	windows_aarch64_gnullvm@0.48.5
+	windows_aarch64_msvc@0.42.2
+	windows_aarch64_msvc@0.48.5
+	windows_i686_gnu@0.42.2
+	windows_i686_gnu@0.48.5
+	windows_i686_msvc@0.42.2
+	windows_i686_msvc@0.48.5
+	windows_x86_64_gnu@0.42.2
+	windows_x86_64_gnu@0.48.5
+	windows_x86_64_gnullvm@0.42.2
+	windows_x86_64_gnullvm@0.48.5
+	windows_x86_64_msvc@0.42.2
+	windows_x86_64_msvc@0.48.5
+	winreg@0.50.0
+"
+inherit cargo
+
+
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://codeberg.org/RobWalt/${PN}.git"
+else
+	KEYWORDS="~amd64"
+	SRC_URI="https://codeberg.org/RobWalt/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI+=" $(cargo_crate_uris)"
+fi
+
+DESCRIPTION="CLI Tool for codeberg similar to gh and glab"
+HOMEPAGE="https://codeberg.org/RobWalt/codeberg-cli"
+LICENSE="AGPL-3+"
+LICENSE+=" 0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 MIT Unicode-DFS-2016 Unlicense ZLIB"
+SLOT="0"
+
+IUSE="custom-rustflags"
+
+BDEPEND=""
+DEPEND=""
+RDEPEND="${DEPEND}"
+
+src_unpack() {
+	if [[ ${PV} == *9999 ]]; then
+		git-r3_src_unpack
+		cargo_live_src_unpack
+	else
+		cargo_src_unpack
+		mv ${WORKDIR}/${PN}/* ${WORKDIR}/${P}/
+	fi
+}

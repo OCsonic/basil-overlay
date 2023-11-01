@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>ocsps2@protonmail.com</email>
+		<name>Basil</name>
+	</maintainer>
+	<use>
+		<flag name="android">Enable Android driver</flag>
+		<flag name="deepoon">Enable Deepoon driver</flag>
+		<flag name="external">Enable some feature called "external", IDFK</flag>
+		<flag name="nolo">Enable Nolo driver</flag>
+		<flag name="psvr">Enable PSVR HMD driver</flag>
+		<flag name="rift">Enable Oculus Rift driver</flag>
+		<flag name="rift-s">Enable Oculus Rift-S driver</flag>
+		<flag name="steamvr">Install OpenHMD SteamVR support</flag>
+		<flag name="vive">Enable driver for HTC Vive, Vive Pro, Valve Index, and their controllers</flag>
+		<flag name="vrtek">Enable Vrtek driver</flag>
+		<flag name="vulkan">Enable Vulkan Graphics API support (also needed for compositor)</flag>
+		<flag name="wayland">Enable Wayland support</flag>
+		<flag name="wmr">Enable WMR driver</flag>
+		<flag name="X">Enable xlib/xlib-randr/xcb support</flag>
+		<flag name="xgvr">Enable XGVR driver</flag>
+	</use>
+</pkgmetadata>
