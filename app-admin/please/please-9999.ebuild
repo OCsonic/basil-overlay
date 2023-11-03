@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-
 CRATES="
 	aho-corasick@0.7.18
 	autocfg@1.1.0
@@ -73,3 +72,8 @@ SLOT="0"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+src_compile() {
+	cargo_gen_config
+	cargo_src_compile
+}
