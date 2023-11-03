@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="A simple program for setting priority using chrt and ionice at the same time."
+DESCRIPTION="A simple wrapper for setting priority using chrt and ionice at the same time."
 HOMEPAGE="https://codeberg.org/BasilBasil/simple-priority"
 
 if [[ ${PV} == 9999 ]]; then
