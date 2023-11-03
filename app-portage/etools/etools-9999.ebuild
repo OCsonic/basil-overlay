@@ -25,5 +25,11 @@ src_compile() {
 }
 
 src_install() {
-	dobin e*
+	dobin etools
+	dosym -r /usr/bin/etools /usr/bin/edepon
+	dosym -r /usr/bin/etools /usr/bin/elistpkgs
+	dosym -r /usr/bin/etools /usr/bin/erepo
+	dosym -r /usr/bin/etools /usr/bin/eshowuse
+	dosym -r /usr/bin/etools /usr/bin/etsls
+	dosym -r /usr/bin/etools /usr/bin/eunfoldmarch
 }
