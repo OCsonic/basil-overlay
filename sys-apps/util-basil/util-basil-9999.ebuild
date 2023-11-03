@@ -18,7 +18,7 @@ fi
 LICENSE="Unlicense"
 SLOT="0"
 
-USE="whatgpu"
+IUSE="whatgpu"
 
 src_compile() {
 	:
