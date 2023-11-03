@@ -72,3 +72,7 @@ SLOT="0"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+src_compile() {
+	default_src_compile
+}
