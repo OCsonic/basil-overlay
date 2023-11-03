@@ -24,6 +24,6 @@ src_compile() {
 
 src_install() {
 	dobin nyaofetch
-	insinto /etc/
+	insinto /etc/nyaofetch/
 	doins nyaofetch-etc/*
 }
