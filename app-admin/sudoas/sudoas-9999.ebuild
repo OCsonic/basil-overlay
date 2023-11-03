@@ -19,7 +19,7 @@ LICENSE="Unlicense"
 SLOT="0"
 
 RDEPEND="
-	! app-admin/sudo
+	!app-admin/sudo
 	app-admin/doas
 "
 #	|| (
