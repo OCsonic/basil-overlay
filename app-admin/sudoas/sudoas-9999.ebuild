@@ -24,7 +24,6 @@ RDEPEND="
 "
 #	|| (
 #		app-admin/doas
-#		app-admin/please
 #		sys-auth/polkit
 #	)
 
