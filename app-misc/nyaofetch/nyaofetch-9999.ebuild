@@ -18,6 +18,8 @@ fi
 LICENSE="Unlicense"
 SLOT="0"
 
+RDEPEND="sys-apps/boltauthd"
+
 src_compile() {
 	:
 }
