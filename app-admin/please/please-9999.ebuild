@@ -74,5 +74,5 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
-	default_src_compile
+	cargo_src_compile
 }
