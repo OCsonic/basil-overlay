@@ -75,7 +75,6 @@ BDEPEND=""
 
 src_configure() {
 	default_src_configure
-	cargo_gen_config
 }
 
 src_compile() {
