@@ -74,5 +74,6 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
+	cargo_gen_config
 	cargo_src_compile
 }
