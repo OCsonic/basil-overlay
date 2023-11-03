@@ -74,6 +74,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_unpack() {
+	default_src_unpack
 	cargo_gen_config
 }
 
