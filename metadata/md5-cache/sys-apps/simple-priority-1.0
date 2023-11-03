@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A simple Thunderbolt authorization daemon that tracks PCI IDs
+EAPI=8
+HOMEPAGE=https://codeberg.org/BasilBasil/util-basil
+KEYWORDS=*
+LICENSE=Unlicense
+SLOT=0
+SRC_URI=https://codeberg.org/BasilBasil/simple-priority/archive/v1.0.tar.gz -> simple-priority-1.0.tar.gz
+_md5_=f9fcbdf542a19839aeae67766ae147d9

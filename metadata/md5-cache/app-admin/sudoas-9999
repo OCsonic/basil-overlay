@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Simple tools to assist and automate some portage functions.
+EAPI=8
+HOMEPAGE=https://codeberg.org/BasilBasil/etools
+INHERIT=git-r3
+LICENSE=Unlicense
+PROPERTIES=live
+RDEPEND=!app-admin/sudo app-admin/doas
+SLOT=0
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
+_md5_=dbdd5a3ef5bd4f57649175cef0764acb

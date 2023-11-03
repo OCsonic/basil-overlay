@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A neofetch replacement designed to be more customizable and powerful.
+EAPI=8
+HOMEPAGE=https://codeberg.org/BasilBasil/nyaofetch
+KEYWORDS=*
+LICENSE=Unlicense
+SLOT=0
+SRC_URI=https://codeberg.org/BasilBasil/nyaofetch/archive/v1.0.tar.gz -> nyaofetch-1.0.tar.gz
+_md5_=b2bebb13c7b81c4efc88aaa859a5be11
