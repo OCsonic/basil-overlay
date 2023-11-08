@@ -1,7 +1,6 @@
 # TODO
 ## ebuilds that need work
 ```
-dev-util/please             - needs non-live section fixed
 dev-util/codeberg-cli       - needs non-live section fixed
 app-admin/pleaser           - needs non-live section fixed
 media-libs/OpenHMD          - fix the install path to /usr/lib instead of /usr/local/lib
