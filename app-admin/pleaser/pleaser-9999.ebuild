@@ -76,6 +76,7 @@ BDEPEND=""
 src_unpack() {
 	if [[ ${PV} == *9999 ]]; then
 		git-r3_src_unpack
+		cargO_live_src_unpack
 	else
 		cargo_src_unpack
 	fi
