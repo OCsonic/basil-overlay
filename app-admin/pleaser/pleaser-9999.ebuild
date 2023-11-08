@@ -82,5 +82,18 @@ src_unpack() {
 }
 
 src_compile() {
-	cargo build --release
+	cargo_src_compile() {
+		debug-print-function ${FUNCNAME} "$@"
+
+		[[ ${_CARGO_GEN_CONFIG_HAS_RUN} ]] || \
+			die "FATAL: please call cargo_gen_config before using ${FUNCNAME}"
+
+		filter-lto
+		tc-export AR CC CXX PKG_CONFIG
+
+		set -- cargo build $(usex debug "" --release) ${ECARGO_ARGS[@]} "$@"
+		einfo "${@}"
+		"${@}" || die "cargo build failed"
+	}
+	default
 }
