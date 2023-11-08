@@ -74,16 +74,12 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_unpack() {
+	cargo_gen_config
 	if [[ ${PV} == *9999 ]]; then
 		git-r3_src_unpack
 	else
 		cargo_src_unpack
 	fi
-}
-
-src_prepare() {
-	default
-	cargo_gen_config
 }
 
 src_compile() {
