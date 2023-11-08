@@ -20,6 +20,16 @@ SLOT="0"
 
 IUSE="whatgpu"
 
+BDEPEND=""
+DEPEND="
+	whatgpu? (
+		x11-apps/mesa-progs
+		dev-util/vulkan-tools
+		dev-util/clinfo
+	)
+"
+RDEPEND="${DEPEND}"
+
 src_compile() {
 	:
 }
