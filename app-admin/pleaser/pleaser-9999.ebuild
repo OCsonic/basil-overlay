@@ -82,6 +82,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
 	cargo_gen_config
 }
 
