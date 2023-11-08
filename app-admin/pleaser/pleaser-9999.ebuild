@@ -82,15 +82,12 @@ src_unpack() {
 }
 
 src_compile() {
-	cargo_src_compile() {
-		debug-print-function ${FUNCNAME} "$@"
+	debug-print-function ${FUNCNAME} "$@"
 
-		filter-lto
-		tc-export AR CC CXX PKG_CONFIG
+	filter-lto
+	tc-export AR CC CXX PKG_CONFIG
 
-		set -- cargo build $(usex debug "" --release) ${ECARGO_ARGS[@]} "$@"
-		einfo "${@}"
-		"${@}" || die "cargo build failed"
-	}
-	default
+	set -- cargo build $(usex debug "" --release) ${ECARGO_ARGS[@]} "$@"
+	einfo "${@}"
+	"${@}" || die "cargo build failed"
 }
