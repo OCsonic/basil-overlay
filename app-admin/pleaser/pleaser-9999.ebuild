@@ -56,10 +56,10 @@ inherit cargo
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://gitlab.com/edneville/${PN}.git"
+	EGIT_REPO_URI="https://gitlab.com/edneville/please.git"
 else
 	KEYWORDS="~amd64"
-	SRC_URI="https://gitlab.com/edneville/${PN}/-/archive/v${PV}/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://gitlab.com/edneville/please/-/archive/v${PV}/please-v${PV}.tar.gz -> ${P}.tar.gz"
 	SRC_URI+=" $(cargo_crate_uris)"
 fi
 
