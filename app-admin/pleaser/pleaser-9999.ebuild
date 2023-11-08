@@ -81,10 +81,6 @@ src_unpack() {
 	fi
 }
 
-src_configure() {
-	cargo_gen_config
-}
-
 src_compile() {
-	cargo_src_compile
+	cargo build --release
 }
