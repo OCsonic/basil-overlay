@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>contact@hacktivis.me</email>
-		<name>Haelwenn (lanodan) Monnier</name>
+		<email>ocsps2@protonmail.com</email>
+		<name>Basil</name>
 	</maintainer>
 	<use>
 		<flag name="dbus">Enable dbus support (for BLE support)</flag>
