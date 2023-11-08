@@ -79,6 +79,9 @@ src_unpack() {
 	else
 		cargo_src_unpack
 	fi
+}
+
+src_prepare() {
 	cargo_gen_config
 }
 
