@@ -85,9 +85,6 @@ src_compile() {
 	cargo_src_compile() {
 		debug-print-function ${FUNCNAME} "$@"
 
-		[[ ${_CARGO_GEN_CONFIG_HAS_RUN} ]] || \
-			die "FATAL: please call cargo_gen_config before using ${FUNCNAME}"
-
 		filter-lto
 		tc-export AR CC CXX PKG_CONFIG
 
