@@ -73,8 +73,8 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-src_configure() {
-	default_src_configure
+src_unpack() {
+	cargo_src_unpack
 }
 
 src_compile() {
