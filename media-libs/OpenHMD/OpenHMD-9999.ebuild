@@ -4,7 +4,7 @@
 EAPI=7
 
 CMAKE_MAKEFILE_GENERATOR=emake
-inherit cmake
+inherit cmake epatch
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
@@ -48,6 +48,13 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	PATCHES=(
+		"${FILESDIR}/multilib-strict-fix.patch"
+	)
+	default
+}
 
 src_configure() {
 	local mycmakeargs=(
