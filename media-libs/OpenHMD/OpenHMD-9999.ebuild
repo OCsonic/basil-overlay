@@ -72,5 +72,9 @@ src_configure() {
 	MYCMAKEARGS+="-S ${CMAKE_USE_DIR} -B ${BUILD_DIR} -DLIB_INSTALL_DIR=lib64"
 	#-DCMAKE_INSTALL_PREFIX=/usr/local -DLIB_SUFFIX=64
 	cmake_src_configure
+}
 
+src_install() {
+	mv "${D}/usr/lib" "${D}/usr/lib64"
+	cmake_src_install
 }
