@@ -72,8 +72,3 @@ src_configure() {
 	MYCMAKEARGS+="-S ${CMAKE_USE_DIR} -B ${BUILD_DIR}"
 	cmake_src_configure
 }
-
-src_compile() {
-	default
-	mv "${D}/usr/lib" "${D}/usr/lib64"
-}
