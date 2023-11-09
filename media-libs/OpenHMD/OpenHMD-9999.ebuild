@@ -69,8 +69,7 @@ src_configure() {
 		-DOPENHMD_EXAMPLE_SIMPLE=$(usex examples)
 	)
 
-	MYCMAKEARGS+="-S ${CMAKE_USE_DIR} -B ${BUILD_DIR} -DLIB_SUFFIX=64"
-	#-DCMAKE_INSTALL_PREFIX=/usr/local
+	MYCMAKEARGS+="-S ${CMAKE_USE_DIR} -B ${BUILD_DIR} -DCMAKE_INSTALL_PREFIX=/usr -DLIBDIR=/usr/lib64 -DLIB_SUFFIX=64"
 	cmake_src_configure
 
 }
