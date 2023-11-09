@@ -53,7 +53,7 @@ src_prepare() {
 	PATCHES=(
 		"${FILESDIR}/multilib-strict-fix.patch"
 	)
-	default
+	cmake_src_prepare
 }
 
 src_configure() {
