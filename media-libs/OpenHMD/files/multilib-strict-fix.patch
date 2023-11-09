@@ -1,0 +1,13 @@
+diff -ruN OpenHMD-Original/CMakeLists.txt OpenHMD-Patched/CMakeLists.txt
+--- OpenHMD-Original/CMakeLists.txt	2023-11-09 11:42:54.028859125 -0800
++++ OpenHMD-Patched/CMakeLists.txt	2023-11-09 11:44:34.302196988 -0800
+@@ -248,7 +248,7 @@
+   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
+ )
+ 
+-install(TARGETS ${TARGETS} DESTINATION lib)
++install(TARGETS ${TARGETS} DESTINATION lib64)
+ install(FILES include/openhmd.h DESTINATION include)
+ install(FILES "${CMAKE_BINARY_DIR}/${PROJECT_NAME}.pc"
+-        DESTINATION lib/pkgconfig)
++        DESTINATION lib64/pkgconfig)
