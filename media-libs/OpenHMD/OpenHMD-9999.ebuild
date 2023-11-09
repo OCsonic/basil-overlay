@@ -76,5 +76,5 @@ src_configure() {
 
 src_install() {
 	mv "${D}/usr/lib" "${D}/usr/lib64"
-	cmake_src_install
+	#cmake_src_install
 }
