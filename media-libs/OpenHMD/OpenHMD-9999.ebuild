@@ -4,7 +4,7 @@
 EAPI=7
 
 CMAKE_MAKEFILE_GENERATOR=emake
-inherit cmake epatch
+inherit cmake
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
