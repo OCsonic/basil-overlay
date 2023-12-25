@@ -18,10 +18,13 @@ echo "*/*::basil-overlay" /etc/portage/package.mask
 ```
 
 ## Overlay features
-Tools for managing a gentoo system easier
-OpenRC services for things that dont already have them in their officiaul package
-~~Moves app-editors/vscode and app-editors/vscodium to app-editors/vscode-bin and app-editors/vscodium-bin~~ (next update)
-~~Replaces app-editors/vscode and app-editors/vscodium with actual source pakages instead of binary packages~~ (next update)
+- Tools for managing a gentoo system easier
+
+- OpenRC services for things that dont already have them in their official package
+
+- ~~Moves app-editors/vscode and app-editors/vscodium to app-editors/vscode-bin and app-editors/vscodium-bin~~ (next update)
+
+- ~~Replaces app-editors/vscode and app-editors/vscodium with actual source pakages instead of binary packages~~ (next update)
 
 ## Contributing
 Check out [TODO.md](./TODO.md) to see where you can help!
