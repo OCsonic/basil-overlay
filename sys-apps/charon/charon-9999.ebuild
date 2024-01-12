@@ -36,10 +36,10 @@ src_install() {
 	#dobin asphodel
 	#dosym asphodel ap
 	dobin elysium
-	dosym elysium elnvidiad
-	dosym elysium elnouveaud
-	dosym elysium elamdd
-	dosym elysium elinteli
+	dosym /usr/bin/elysium /usr/bin/elnvidiad
+	dosym /usr/bin/elysium /usr/bin/elnouveaud
+	dosym /usr/bin/elysium /usr/bin/elamdd
+	dosym /usr/bin/elysium /usr/bin/elinteli
 	dobin tartarus
-	dosym tartarus ta
+	dosym /usr/bin/tartarus /usr/bin/ta
 }
