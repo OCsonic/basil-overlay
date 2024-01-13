@@ -33,8 +33,8 @@ src_compile() {
 }
 
 src_install() {
-	#dobin asphodel
-	#dosym asphodel ap
+	dobin asphodel
+	dosym /usr/bin/asphodel /usr/bin/ap
 	dobin elysium
 	dosym /usr/bin/elysium /usr/bin/elnvidiad
 	dosym /usr/bin/elysium /usr/bin/elnouveaud
