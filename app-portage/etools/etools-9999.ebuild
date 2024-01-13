@@ -26,10 +26,15 @@ src_compile() {
 
 src_install() {
 	dobin etools
-	dosym -r /usr/bin/etools /usr/bin/edepon
+	if (( $(echo "${PV}" <= "1.0" | bc -l) )); then
+		dosym -r /usr/bin/etools /usr/bin/edepon
+	fi
 	dosym -r /usr/bin/etools /usr/bin/elistpkgs
 	dosym -r /usr/bin/etools /usr/bin/erepo
 	dosym -r /usr/bin/etools /usr/bin/eshowuse
 	dosym -r /usr/bin/etools /usr/bin/etsls
 	dosym -r /usr/bin/etools /usr/bin/eunfoldmarch
+	if (( $(echo "${PV}" >= "1.1" | bc -l) )); then
+		dosym -r /usr/bin/etools /usr/bin/ebulkcond
+	fi
 }
