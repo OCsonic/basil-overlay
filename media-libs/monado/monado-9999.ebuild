@@ -50,7 +50,6 @@ DEPEND="
 	opengl? ( virtual/opengl )
 	opencv? ( media-libs/opencv:= )
 	openhmd? ( media-libs/OpenHMD )
-	gles? ( media-libs/mesa[gles1,gles2] )
 	dbus? ( sys-apps/dbus )
 	systemd? ( sys-apps/systemd:= )
 	uvc? ( media-libs/libuvc )
