@@ -36,6 +36,7 @@ src_install() {
 	dobin asphodel
 	dosym /usr/bin/asphodel /usr/bin/ap
 	dobin elysium
+	dobin elysium-flatpak-cfg
 	dosym /usr/bin/elysium /usr/bin/elnvidiad
 	dosym /usr/bin/elysium /usr/bin/elnouveaud
 	dosym /usr/bin/elysium /usr/bin/elamdd
