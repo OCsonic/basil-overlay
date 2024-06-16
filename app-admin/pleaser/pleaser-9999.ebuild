@@ -1,5 +1,5 @@
-# Copyright 2023 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
+# Copyright 2024 Basil
+# Distributed under the terms of the BSD-3-Clause-CA-AD-v1.0 License
 
 EAPI=8
 CRATES="
