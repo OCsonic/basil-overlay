@@ -1,7 +1,7 @@
 # Copyright 2024 Basil
 # Distributed under the terms of the BSD-3-Clause-CA-AD-v1.0 License
 
-EAPI=7
+EAPI=8
 CRATES="
 	adler-1.0.2
 	aes-0.8.3
