@@ -18,15 +18,16 @@ fi
 LICENSE="BSD-CA-AD-v1.0"
 SLOT="0"
 
-BDEPEND=""
-DEPEND="
-	x11-apps/mesa-progs
-	dev-util/vulkan-tools
-	dev-util/clinfo
-	media-video/libva-utils
-	x11-misc/vdpauinfo
+IUSE="opengl gles vulkan opencl vaapi vdpau"
+
+RDEPEND="
+	opengl? ( x11-apps/mesa-progs )
+	gles? ( x11-apps/mesa-progs )
+	vulkan? ( dev-util/vulkan-tools )
+	opencl? ( dev-util/clinfo )
+	vaapi? ( media-video/libva-utils )
+	vdpau? ( x11-misc/vdpauinfo )
 "
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	:
