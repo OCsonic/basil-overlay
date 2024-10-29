@@ -6,21 +6,17 @@
 		<name>Basil</name>
 	</maintainer>
 	<use>
+		<flag name="gles">Enable OpenGL ES Graphics API support</flag>
+		<flag name="steamvr">Compile the SteamVR plugin for Monado (recommended)</flag>
+		<flag name="openhmd">Enable OpenHMD support (recommended)</flag>
+		<flag name="psvr">Enable Playstation VR support</flag>
+		<flag name="psmv">Enable Playstation Move support</flag>
+		<flag name="vive">Enable Valve Index and Vive support</flag>
+		<flag name="arduino">Enable Arduino support (requires BLE)</flag>
+		<flag name="daydream">Enable Google Daydream support (requires BLE)</flag>
+		<flag name="qwerty">Enable QWERTY driver for interacting with OpenXR using a keyboard</flag>
 		<flag name="dbus">Enable dbus support (for BLE support)</flag>
-		<flag name="ffmpeg">Enable ffmpeg testing video driver</flag>
-		<flag name="gles">Enable OpenGL-ES Graphics API support</flag>
-		<flag name="gstreamer">Enable gstreamer</flag>
-		<flag name="opencv">Enable OpenCV backend</flag>
-		<flag name="openhmd">Enable OpenHMD support</flag>
-		<flag name="opengl">Enable OpenGL Graphics API support</flag>
-		<flag name="psvr">Enable PSVR HMD driver</flag>
-		<flag name="sdl">Enable use of SDL2</flag>
-		<flag name="steamvr">Install Monado SteamVR support</flag>
-		<flag name="systemd">Enable systemd support (for socket activation of service)</flag>
-		<flag name="uvc">Enable libuvc video driver</flag>
-		<flag name="vive">Enable driver for HTC Vive, Vive Pro, Valve Index, and their controllers</flag>
-		<flag name="vulkan">Enable Vulkan Graphics API support (also needed for compositor)</flag>
-		<flag name="wayland">Enable Wayland support</flag>
-		<flag name="X">Enable xlib/xlib-randr/xcb support</flag>
+		<flag name="uvc">Enable libuvc</flag>
+		<flag name="opencv">Enable opencv</flag>
 	</use>
 </pkgmetadata>
