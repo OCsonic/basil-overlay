@@ -24,6 +24,6 @@ src_compile() {
 
 src_install() {
 	insinto /etc/portage/
-	doins portage/bashrc
 	doins -r portage/portage.eplug
+	doins portage/bashrc
 }
