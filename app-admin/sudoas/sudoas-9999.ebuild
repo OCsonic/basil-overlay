@@ -3,8 +3,8 @@
 
 EAPI=8
 
-DESCRIPTION="Simple tools to assist and automate some portage functions."
-HOMEPAGE="https://codeberg.org/BasilBasil/etools"
+DESCRIPTION="A compatibility layer for replacing Sudo with other SUID programs."
+HOMEPAGE="https://codeberg.org/BasilBasil/sudoas"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3

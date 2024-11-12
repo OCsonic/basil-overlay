@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="Description TBA"
+DESCRIPTION="A simple toolkit for debugging and selecting GPUs"
 HOMEPAGE="https://codeberg.org/BasilBasil/Charon"
 
 if [[ ${PV} == 9999 ]]; then

@@ -4,7 +4,7 @@
 EAPI=8
 
 DESCRIPTION="A simple Thunderbolt authorization daemon that tracks PCI IDs"
-HOMEPAGE="https://codeberg.org/BasilBasil/util-basil"
+HOMEPAGE="https://codeberg.org/BasilBasil/boltauthd"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3

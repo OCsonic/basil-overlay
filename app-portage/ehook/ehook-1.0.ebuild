@@ -1,1 +1,1 @@
-ehook-9999.ebuild
+ehook-1.1.ebuild
